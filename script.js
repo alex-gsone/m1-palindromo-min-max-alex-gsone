@@ -8,9 +8,9 @@ function isPalindrome(str){
     for(i=0;i<str.length;i++){
             //
             if(str[i]===str[str.length-1-i]){
-                console.log(`${str[i]} and ${str[str.length-1-i]}`)
+                // console.log(`${str[i]} and ${str[str.length-1-i]}`)
                 if(i===str.length-1){
-                    console.log(i, str.length-1-i)
+                    // console.log(i, str.length-1-i)
                     return true
                 }
             }else{
@@ -27,13 +27,14 @@ isPalindrome('amarela');
 function arrayMaxMin(lista){
     for(i=0; i<lista.length; i++){
         for(j=0; j<lista.length; j++){
+
+            // verifique se lista[j] > lista[i], sendo verdade,
+            // permute a posição desses elementos! 
             if(lista[j] > lista[i]){
                 [lista[j], lista[i]] = [lista[i], lista[j]]
-                // console.log(array)
             }
         }
     }
-    console.log(lista)
+    // console.log(lista)
     return lista;    
 }
-// arrayMaxMin([1,52,59,16,13,9])
