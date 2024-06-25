@@ -22,7 +22,7 @@ function isPalindrome(str){
         
     }
 }
-isPalindrome('amarela');   
+// isPalindrome('amarela');   
 
 function arrayMaxMin(lista){
     for(i=0; i<lista.length; i++){
