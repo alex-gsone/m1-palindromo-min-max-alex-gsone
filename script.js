@@ -1,40 +1,35 @@
 function isPalindrome(str){
 
-    // transforme str em letras minúsculas:
     str = str.toLowerCase();
-
-    // Elimine os espaços vazios:
     str = str.replace(/\s/g, '')
-    for(i=0;i<str.length;i++){
-            //
-            if(str[i]===str[str.length-1-i]){
-                // console.log(`${str[i]} and ${str[str.length-1-i]}`)
-                if(i===str.length-1){
-                    // console.log(i, str.length-1-i)
-                    return true
-                }
-            }else{
-                console.log("nda")
-                if(i===str.length-1){
-                    return false
-                }
-            }          
-        
-    }
-}
-// isPalindrome('amarela');   
+    let array_true_false = new Array(str.length);
+    array_true_false[str.length-1] = false
 
-function arrayMaxMin(lista){
-    for(i=0; i<lista.length; i++){
-        for(j=0; j<lista.length; j++){
-
-            // verifique se lista[j] > lista[i], sendo verdade,
-            // permute a posição desses elementos! 
-            if(lista[j] > lista[i]){
-                [lista[j], lista[i]] = [lista[i], lista[j]]
+    for(i=0; i < str.length; i++){
+        if(str[i] === str[str.length-1-i]){
+            array_true_false[i] = true  
+            if(array_true_false.every(element => element === true)){
+                return true
             }
+        }else{
+            return false 
+        }              
+    } 
+    
+}
+function arrayMaxMin(lista){
+    let aux1 = 0;
+    let aux2 = lista[0];
+
+    for(let i=0; i<lista.length; i++){
+
+        if(aux1 < lista[i]){
+           aux1 = lista[i]
         }
+        if(aux2 > lista[i]){
+            aux2 = lista[i]
+        }     
     }
-    // console.log(lista)
-    return lista;    
+    let array = [aux2, aux1]
+    return array;    
 }
