@@ -1,11 +1,11 @@
 function isPalindrome(str){
-
     str = str.toLowerCase();
     str = str.replace(/\s/g, '')
     let array_true_false = new Array(str.length);
     array_true_false[str.length-1] = false
 
-    for(i=0; i < str.length; i++){
+    for(let i=0; i < str.length; i++){
+
         if(str[i] === str[str.length-1-i]){
             array_true_false[i] = true  
             if(array_true_false.every(element => element === true)){
@@ -14,9 +14,9 @@ function isPalindrome(str){
         }else{
             return false 
         }              
-    } 
-    
+    }     
 }
+
 function arrayMaxMin(lista){
     let aux1 = 0;
     let aux2 = lista[0];
