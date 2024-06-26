@@ -5,7 +5,6 @@ function isPalindrome(str){
     array_true_false[str.length-1] = false
 
     for(let i=0; i < str.length; i++){
-
         if(str[i] === str[str.length-1-i]){
             array_true_false[i] = true  
             if(array_true_false.every(element => element === true)){
@@ -22,7 +21,6 @@ function arrayMaxMin(lista){
     let aux2 = lista[0];
 
     for(let i=0; i<lista.length; i++){
-
         if(aux1 < lista[i]){
            aux1 = lista[i]
         }
