@@ -2,6 +2,8 @@ function isPalindrome(str){
     str = str.toLowerCase();
     str = str.replace(/\s/g, '')
     let array_true_false = new Array(str.length);
+    console.log(array_true_false.length)
+    console.log(str.length)
     array_true_false[str.length-1] = false
 
     for(let i=0; i < str.length; i++){
@@ -15,6 +17,7 @@ function isPalindrome(str){
         }              
     }     
 }
+isPalindrome('A mala nada na lama');
 
 function arrayMaxMin(lista){
     let aux1 = 0;
